@@ -1,6 +1,8 @@
 pub mod calculator1;
 pub mod calculator2;
 pub mod calculator3;
+pub mod calculator4;
+pub mod ast;
 
 #[test]
 fn calculator1() {
@@ -27,6 +29,12 @@ fn calculator3() {
     assert!(calculator3::parse_Expr("3*(/3)").is_err());
     assert!(calculator3::parse_Expr("*3").is_err());
     assert!(calculator3::parse_Expr("(").is_err());
+}
+
+#[test]
+fn calculator4() {
+    assert_eq!(&format!("{:?}", calculator4::parse_Expr("22 * 44 + 66").unwrap()),
+               "((22 * 44) + 66)");
 }
 
 fn main() {
