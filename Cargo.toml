@@ -1,0 +1,11 @@
+[package]
+name = "lalrpop-calculator"
+version = "0.1.0"
+authors = ["Caleb Jones <self@calebjones.net>"]
+build = "build.rs"
+
+[build-dependencies]
+lalrpop = "0.11.0"
+
+[dependencies]
+lalrpop-util = "0.11.0"
